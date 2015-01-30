@@ -21,14 +21,14 @@ client      = TwilioRestClient(account_sid, auth_token)
 api_key     = config['forecast_api_key']
 
 # Longitude and Latitude
-# Huntersville: 35.4034,-80.8611
+# Huntersville, NC: 35.4034,-80.8611
 lat = 35.4034
 lng = -80.8611
 
 forecast = forecastio.load_forecast(api_key, lat, lng)
  
 def weather_for_zip(zip_code):
+    pass
 
- 
-forecast = forecastio.load_forecast(api_key, lat, lng)
+
 
