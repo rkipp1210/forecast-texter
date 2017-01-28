@@ -1,5 +1,5 @@
 #!/usr/bin/env python
- 
+
 import urllib
 import forecastio
 import datetime
@@ -14,21 +14,16 @@ config = json.loads(configFile)
 
 # Twilio Information
 account_sid = config['twilio_account_sid']
-auth_token  = config['twilio_auth_token']
-client      = TwilioRestClient(account_sid, auth_token)
+auth_token = config['twilio_auth_token']
+client = TwilioRestClient(account_sid, auth_token)
 
-# Forecast.io information
-api_key     = config['forecast_api_key']
+# DarkSky API Key information
+api_key = config['darksky_secret_key']
 
 # Longitude and Latitude
-# Huntersville, NC: 35.4034,-80.8611
-lat = 35.4034
-lng = -80.8611
+BK = [40.6822, -73.9947]
 
 forecast = forecastio.load_forecast(api_key, lat, lng)
- 
-def weather_for_zip(zip_code):
+
+def weatherForZip(zip_code):
     pass
-
-
-
